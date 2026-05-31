@@ -7,6 +7,7 @@
 
 <style>
 
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -14,46 +15,32 @@
     font-family:Arial, sans-serif;
 }
 
+/* BODY */
 body{
     background:#f5f7fa;
 }
 
-/* Navbar */
-
+/* NAVBAR */
 nav{
     background:#2563eb;
+    color:white;
     padding:15px;
     display:flex;
-    flex-direction:column;
+    justify-content:space-between;
     align-items:center;
-}
-
-nav ul{
-    display:flex;
     flex-wrap:wrap;
-    justify-content:center;
-    list-style:none;
-    margin-top:10px;
-}
-
-nav ul li{
-    margin:5px 10px;
-}
 }
 
 .logo{
-    color:white;
-    font-size:28px;
+    font-size:22px;
     font-weight:bold;
 }
 
 nav ul{
     display:flex;
     list-style:none;
-}
-
-nav ul li{
-    margin-left:25px;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 nav ul li a{
@@ -62,127 +49,113 @@ nav ul li a{
     font-weight:bold;
 }
 
-/* Hero Section */
-
+/* HERO */
 .hero{
     text-align:center;
-    padding:120px 20px;
+    padding:80px 20px;
 }
 
 .hero h1{
-    font-size:50px;
+    font-size:40px;
     color:#1e293b;
 }
 
 .hero p{
-    margin-top:20px;
+    margin-top:15px;
     font-size:18px;
     color:#555;
 }
 
 .btn{
     display:inline-block;
-    margin-top:30px;
-    padding:12px 30px;
+    margin-top:25px;
+    padding:12px 25px;
     background:#2563eb;
     color:white;
     text-decoration:none;
     border-radius:8px;
 }
 
-/* Features */
-
+/* FEATURES */
 .features{
     display:flex;
     justify-content:center;
     gap:20px;
-    padding:50px;
     flex-wrap:wrap;
+    padding:40px 20px;
 }
 
 .card{
     background:white;
-    width:250px;
-    padding:25px;
-    border-radius:10px;
+    width:200px;
+    padding:20px;
+    border-radius:12px;
     text-align:center;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
-.card h3{
-    margin-bottom:10px;
+.card:hover{
+    transform:scale(1.05);
 }
 
-/* Footer */
-
+/* FOOTER */
 footer{
     background:#1e293b;
     color:white;
     text-align:center;
-    padding:20px;
-    margin-top:50px;
-}
-.card{
-    background:white;
-    width:250px;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    text-decoration:none;
-    color:black;
+    padding:15px;
+    margin-top:40px;
 }
 
 </style>
+
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav>
     <div class="logo">ApexLearn</div>
 
     <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="notes.html">Notes</a></li>
         <li><a href="courses.html">Courses</a></li>
-       <li><a href="notes.html">Notes</a></li>
-        <li><a href="#">Quiz</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
     <h1>Welcome to ApexLearn</h1>
+    <p>Smart study platform for Class 11 & 12 students (NCERT based notes & quizzes)</p>
 
-    <p>
-        Learn smarter with quality notes, quizzes,
-        and study materials designed for students.
-    </p>
-
-    <a href="notes.html" class="btn">Get Started</a>
+    <a href="courses.html" class="btn">Get Started</a>
 </section>
 
+<!-- FEATURES -->
 <section class="features">
-
+<a href="notes.html">
     <div class="card">
-        <a href="Notes.html">
-    <h3>📚 Notes</h3>
-    <p>Easy and exam-oriented study notes.</p>
-</a>
-    </div>
-
-    <div class="card">
-      
-        <h3>📝 Quiz</h3>
-        <p>Test your knowledge with quizzes.</p>
-    </div>
-
-    <div class="card">
+        <h3>📚 Notes</h3>
+        <p>Easy and exam-ready notes</p>
+    </div></a>
 <a href="courses.html">
-        <h3>🎯 Courses</h3>
-        <p>Structured learning for every subject.</p>
+    <div class="card">
+        <h3>📖 Courses</h3>
+        <p>All subjects structured</p>
     </div>
-
+    </a>
+<a href="quizs.html">
+    <div class="card">
+        <h3>📝 Quiz</h3>
+        <p>Test your knowledge</p>
+    </div>
+</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
     © 2026 ApexLearn | Learn Better, Achieve Greater
 </footer>
