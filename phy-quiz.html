@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ApexLearn Physics Quiz</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#2563eb;
+  padding:12px 15px;
+  position:sticky;
+  top:0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:bold;
+}
+
+.circle{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  background:url("logo.png");
+  background-size:cover;
+}
+
+/* CHAPTER NAME */
+#chapterName{
+  background:#1e293b;
+  padding:10px;
+  text-align:center;
+}
+
+/* CHAPTER LIST */
+#chapters h2{
+  padding:12px;
+  background:#1e293b;
+  margin:8px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* QUIZ */
+#quizBox{display:none;padding:15px;}
+
+.option{
+  display:block;
+  width:100%;
+  margin:8px 0;
+  padding:10px;
+  background:#334155;
+  color:white;
+  border:none;
+  border-radius:8px;
+}
+
+.btn{
+  padding:8px 12px;
+  margin:5px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.back{background:#ef4444;color:white;}
+.next{background:#22c55e;}
+.skip{background:#f97316;}
+
+/* RESULT */
+#resultBox{
+  display:none;
+  padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <div class="circle"></div>
+    <div>ApexLearn</div>
+  </div>
+
+  <button class="btn back" onclick="goHome()">⬅ Back</button>
+</nav>
+
+<!-- CHAPTER NAME -->
+<div id="chapterName">Select Chapter</div>
+
+<!-- CHAPTER LIST -->
+<div id="chapters">
+  <!-- JS se fill hoga -->
+</div>
+
+<!-- QUIZ -->
+<div id="quizBox">
+
+<h3 id="timer">15</h3>
+<h2 id="question"></h2>
+
+<div id="options"></div>
+
+<button class="btn back" onclick="backQ()">Back</button>
+<button class="btn skip" onclick="skipQ()">Skip</button>
+<button class="btn next" onclick="nextQ()">Next</button>
+
+</div>
+
+<!-- RESULT -->
+<div id="resultBox">
+<h2>Result</h2>
+
+<canvas id="pie"></canvas>
+<canvas id="bar"></canvas>
+
+<div id="review"></div>
+</div>
+
+<script src="phy.js"></script>
+
+</body>
+</html>

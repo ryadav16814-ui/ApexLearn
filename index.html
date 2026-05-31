@@ -15,20 +15,31 @@
     font-family:Arial, sans-serif;
 }
 
-/* BODY */
+/* BODY (ONLY ONE TIME FIXED) */
 body{
-    background:#f5f7fa;
+    margin: 0;
+    font-family: Arial;
+
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("apx-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white; /* background ke upar text visible rahe */
 }
 
 /* NAVBAR */
 nav{
-    background:#2563eb;
+    background: rgba(37, 99, 235, 0.85); /* transparent look */
     color:white;
     padding:15px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
+    backdrop-filter: blur(5px);
 }
 
 .logo{
@@ -57,13 +68,13 @@ nav ul li a{
 
 .hero h1{
     font-size:40px;
-    color:#1e293b;
+    color:white;
 }
 
 .hero p{
     margin-top:15px;
     font-size:18px;
-    color:#555;
+    color:#e5e5e5;
 }
 
 .btn{
@@ -86,13 +97,14 @@ nav ul li a{
 }
 
 .card{
-    background:white;
+    background: rgba(255,255,255,0.9);
     width:200px;
     padding:20px;
     border-radius:12px;
     text-align:center;
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
     transition:0.3s;
+    color:black;
 }
 
 .card:hover{
@@ -101,11 +113,53 @@ nav ul li a{
 
 /* FOOTER */
 footer{
-    background:#1e293b;
+    background: rgba(30, 41, 59, 0.9);
     color:white;
     text-align:center;
     padding:15px;
     margin-top:40px;
+}
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* CIRCLE LOGO */
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* CIRCLE LOGO */
+.logo-circle{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+
+    background-image: url("logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border:2px solid white;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* TEXT */
+.brand{
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+}
+
+/* BRAND TEXT */
+.brand{
+    font-size:20px;
+    font-weight:bold;
+    color:white;
 }
 
 </style>
@@ -115,17 +169,19 @@ footer{
 
 <!-- NAVBAR -->
 <nav>
-    <div class="logo">ApexLearn</div>
+  <div class="logo-box">
+    <div class="logo-circle">A</div>
+    <span class="brand">ApexLearn</span>
+  </div>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="notes.html">Notes</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="quizs.html">Quiz</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
-
 <!-- HERO -->
 <section class="hero">
     <h1>Welcome to ApexLearn</h1>
