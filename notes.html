@@ -1,50 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Class 11 Notes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Notes - ApexLearn</title>
+
 <style>
 
-body{
-    font-family:Arial, sans-serif;
+/* RESET */
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* BODY */
+body{
     background:#f5f7fa;
-    font-size:18px;   /* 👈 main fix */
-    line-height:1.6;
 }
 
-/* headings bigger */
-h1{
-    font-size:32px;
+/* HEADER */
+header{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:22px;
+    font-weight:bold;
 }
 
-h2{
-    font-size:24px;
-    background:#e8f0ff;
-    padding:10px;
-    border-left:5px solid #2563eb;
+/* GRID */
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
 }
 
-/* links better size */
-a{
-    font-size:18px;
+/* CARD (FULL CLICKABLE) */
+.card{
+    background:white;
+    width:180px;
+    padding:20px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+
+    display:block;
+    text-decoration:none;
+    color:#000;
 }
 
-/* table text */
-table{
-    font-size:17px;
+/* HOVER EFFECT */
+.card:hover{
+    transform:scale(1.05);
+    background:#eef4ff;
+}
+
+/* ICON */
+.icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .card{
+        width:45%;
+    }
+}
+
+@media(max-width:480px){
+    .card{
+        width:100%;
+    }
 }
 
 </style>
+
 </head>
 <body>
 
-<h1>Class 11 Notes</h1>
+<header>📚 Class 11 Notes Dashboard</header>
 
-<a href="physics.html" class="subject">Physics</a>
-<a href="chemistry.html" class="subject">Chemistry</a>
-<a href="maths.html" class="subject">Mathematics</a>
-<a href="biology.html" class="subject">Biology</a>
-<a href="english.html" class="subject">English</a>
+<div class="container">
+
+    <a href="physics.html" class="card">
+        <div class="icon">⚛️</div>
+        Physics
+    </a>
+
+    <a href="chemistry.html" class="card">
+        <div class="icon">🧪</div>
+        Chemistry
+    </a>
+
+    <a href="biology.html" class="card">
+        <div class="icon">🌿</div>
+        Biology
+    </a>
+
+    <a href="maths.html" class="card">
+        <div class="icon">📐</div>
+        Mathematics
+    </a>
+
+    <a href="english.html" class="card">
+        <div class="icon">📖</div>
+        English
+    </a>
+
+</div>
 
 </body>
 </html>
